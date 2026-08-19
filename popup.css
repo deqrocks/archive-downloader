@@ -1,0 +1,155 @@
+body #searchView {
+	display: flex;
+	width: 700px;
+	min-height: 400px;
+}
+body,li,div,a, section {
+	font-family: sans-serif;
+	font-size: 12px;
+}
+li {
+	white-space: nowrap;
+}
+ul {
+	list-style: none;
+	list-style-type: none;
+	padding: 5px 0;
+    margin: 0;
+}
+h3 {
+	margin: 5px 0;
+}
+progress {
+	background-color: blue;
+	height: 1rem;
+	border: 1px solid gray;
+	position: relative;	
+}
+progress::-webkit-progress-value {
+	background-color: lightblue;
+}
+progress::-webkit-progress-bar {
+	background-color: lightyellow;
+}
+#progress {
+	width: 100%;
+}
+#status {
+	/* avoid an excessively wide status text */
+	white-space: pre;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	max-width: 400px;
+}
+.fine{
+	background-color:green;
+	color:yellow;
+}
+.super {
+	background-color: lightgreen;
+	color: black;
+}
+.medium {
+	background-color: orange;
+	color: black;
+}
+.bad{
+	background-color:red;
+	color:white;
+}
+.matched {
+	color:green
+}
+
+#closeBtn {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	padding: 2px 5px;
+	border: 1px solid gray;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.download-list-wrapper {
+	max-height: 490px;
+	overflow-x:hidden;
+	overflow-y:auto;	
+}
+#txtLinksDownload > * {
+	display: inline-block;
+	white-space: nowrap;
+}
+#fileFormats {
+	border-right: 1px solid black;
+	padding-right: 5px;
+	margin-right: 10px;
+	min-width: 160px;
+	display: flex;
+    flex-direction: column;
+}
+#fileFormats [data-counter] {
+	width: 2.5rem;
+	text-align: right;
+	padding-right: 5px;
+	margin-left: 5px;
+}
+
+#downloadsList li span {
+	flex-shrink: 0;
+    flex-basis: 45px;
+    text-align: right;
+}
+#txtLinksDownload {
+	line-height: 2rem;
+}
+li label {
+	flex-grow: 2;
+	min-width: 0;
+}
+li input {
+	flex-shrink: 0;
+}
+label h3 {
+	margin: 3px;
+	font-weight: normal;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+li {
+	display: flex;
+}
+#searchView li {
+	align-items: center;
+	max-width: 500px;
+}
+#searchView .download-list-wrapper {
+	border-top: 1px solid gray;
+}
+
+#info {
+	color: darkred;
+	border-top: 1px solid gray;
+    line-height: 2rem;
+	font-weight: bolder;
+}
+.links-container {
+	flex-grow: 2;
+}
+.matching-chips {
+	line-height: 1rem;
+	padding: 0 1rem;
+	background-color: ghostwhite;
+	box-shadow: 2px 2px 5px #888888;
+	margin-left: 10px;
+}
+#badUrl {
+    min-width: 250px;
+}
+#badUrl, #badUrl a {
+	font-size: 14px;
+}
+#badUrl a {
+	font-weight: bolder;
+}

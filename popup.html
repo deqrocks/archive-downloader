@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Archive downloader</title>
+		<link rel="stylesheet" href="popup.css">
+		<link rel="stylesheet" href="download.css">
+		<script src="globals.js"></script>
+		<script src="helpers.js"></script>
+		<script src="popup-dom.js"></script>
+		<script src="download.js"></script>
+		<script src="popup.js"></script>
+	</head>
+	<body>
+		<section id="searchView" style="display:none">
+			<div id="fileFormats">
+				<h3>File formats:</h3>
+				<div id="showProgress">
+					<progress id="progress" class="download-progress" data-label=""></progress>
+				</div>
+				<ul id="extList"></ul>
+				<button id="stopScanBtn">Stop scan</button>
+			</div>
+	
+			<div class="links-container">
+				<h3>Available links:</h3>
+				<div id="txtLinksDownload" hidden>
+					<a id="downloadLink" target="_blank" download="download-links.txt" title="get simple text file with list of all download links&#10;use it to import into your favorite file downloader&#10;recommended for slower networks">get-links.txt</a> or 
+					<button id="startDownload" title="download all files using build in chrome download manager&#10;recommended for fast networks or small files">start download</button>
+				</div>
+				<div id="info">Processing...</div>
+				<div class="download-list-wrapper">
+					<ul id="downloadsList"></ul>
+				</div>
+			</div>
+		</section>
+
+		<section id="downloadsView" hidden>
+			<div class="download-list-wrapper">
+				<ul id="downloadProgress">processing...</ul>
+			</div>
+			<div id="downloadCompleted" hidden>
+				<div class="download-completed">
+					<div>
+						<h2>Download Completed</h2>
+						<button id="newSearchBtn" title="click to start a new search for the same page">New Search</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="badUrl" hidden>
+			<h3>Nearly there!</h3>
+			You are on archive.org but to use this extension please go into a single collection page 
+			like <a href="https://archive.org/details/ares_magazine" id="aresExampleLink">this one</a><br>
+		</section>
+
+		<span id="closeBtn" title="click to close the popup">X</span>
+		
+	</body>
+</html>
+
